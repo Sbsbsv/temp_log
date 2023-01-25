@@ -213,6 +213,24 @@
     padding: 25px;
     height: 66.7%;
        }
+       #hrules{
+        width: 15px;
+        height: 15px;
+       }
+       #signinform,#signupform{
+        display: none;
+       }
+
+       @media(min-width:700px) {
+        .bg{
+          display: none;
+        }
+       }
+       @media(max-width:700px) {
+        .bg{
+          display: block;
+        }
+       }
     </style>
   </head>
   <body>
@@ -235,26 +253,68 @@
                 
                 <div class="d3 glass" id="gilla">
                  
-                  <div class="d-flex justify-content-center chevron">
+                  <div class="d-flex justify-content-center chevron mb-4">
                     <button class="chevbtn" id="downbtn"> <i class="bi bi-chevron-double-down"></i></button>
                     
                   </div>
 
                   <div class="d-flex justify-content-center align-items-center">
+
+                    <form action="" class="inpsform" id="theform">
+                      <h4 class="mb-4 mt-4 Welcome" >Welcome to MBH</h4>
+                      <!-- Email input -->
+                      <div class="form-outline mb-3 d-flex justify-content-center">
+                        <!-- <label class="form-label" for="form1Example1">Email address</label> -->
+                        <input type="email" id="emailforsignup" class="form-control inps" placeholder="Email" />
+                        
+                      </div>
+                    
+                      <!-- Password input -->
+                      <div class="form-outline mb-3 d-flex justify-content-center">
+
+                        <input type="password" id="passcodeforsignup" class="form-control inps" placeholder="Password" />
+                      
+                      </div>
+                      <div class="form-outline mb-3 d-flex justify-content-center">
+
+                        <input type="password" id="confirmpasscode" class="form-control inps" placeholder="Confirm Password" />
+                      
+                      </div>
+                    
+                      <!-- 2 column grid layout for inline styling -->
+                      <div class="row mb-5">
+                        <div class="col d-flex justify-content-center align-items-baseline">
+                          <input type="checkbox" class="m-1" checked name="" id="hrules"><p style="color: gray;">Agreed to Hostel  rules</p>
+                          
+                        </div>
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-primary btn-block my-3" id="signupbtn">Sign up</button>
+                      </div>
+                    <div class="d-flex justify-content-center">
+                      <p class="already " style="color: black;">Already have account? <a class="loggd" href="#" id="alreadylogin" onclick="bora()">log in</a></p>
+                    </div>
+                    </div>
+                    
+                      <!-- Submit button -->
+                     
+
+                    </form>
+
+                    <form class="inpsform" id="signupform"> </form>
                    
-                    <form class="inpsform">
+                    <form class="inpsform" id="signinform">
                       <h3 class="mb-4 Welcome" >Welcome Back!</h3>
                       <!-- Email input -->
                       <div class="form-outline mb-4 d-flex justify-content-center">
                         <!-- <label class="form-label" for="form1Example1">Email address</label> -->
-                        <input type="email" id="form1Example1" class="form-control inps" placeholder="Email" />
+                        <input type="email" id="emailforlogin" class="form-control inps" placeholder="Email" />
                         
                       </div>
                     
                       <!-- Password input -->
                       <div class="form-outline mb-4 d-flex justify-content-center">
 
-                        <input type="password" id="form1Example2" class="form-control inps" placeholder="Password" />
+                        <input type="password" id="passcodeforlogin" class="form-control inps" placeholder="Password" />
                       
                       </div>
                     
@@ -268,7 +328,7 @@
                         <button type="submit" class="btn btn-primary btn-block my-3" id="siginbtn">Sign in</button>
                       </div>
                     <div class="d-flex justify-content-center">
-                      <p class="already " style="color: black;">Don't have account? <a class="loggd" href="">Sign up</a></p>
+                      <p class="already" id="pid" style="color: black;">Don't have account? <a class="loggd" href="#" id="alsss" onclick="nora()">Sign up</a></p>
                     </div>
                     </div>
                     
@@ -279,6 +339,7 @@
                   
 
               </div>
+              <div id="emptydiv" style="display: none;"><p>a</p></div>
                 <div class="fgy" id="culdiv">   
                   
                     <div class="ant"> 
@@ -314,8 +375,29 @@
     }, 900);
            
         })
-       
+        document.getElementById('hrules').addEventListener('click',()=>{
+          let bool=document.getElementById('hrules')
+          if(bool.checked){
+            document.getElementById('signupbtn').disabled=false
+          }else{
+            document.getElementById('signupbtn').disabled=true 
+          }
+        })
 
+        function bora(){
+          document.getElementById('signupform').innerHTML= document.getElementById('theform').innerHTML;
+          document.getElementById('theform').innerHTML=  document.getElementById('signinform').innerHTML;
+          document.getElementById('signinform').innerHTML="";
+        }
+
+       function nora(){
+          console.log('somethinf')
+          document.getElementById('signinform').innerHTML= document.getElementById('theform').innerHTML;
+          document.getElementById('theform').innerHTML=  document.getElementById('signupform').innerHTML;
+          document.getElementById('signupform').innerHTML="";
+        }
+       
+        
 
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
