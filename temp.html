@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&family=Kavoon&family=Noto+Sans:wght@600;900&family=Poppins&family=Roboto:wght@500&family=Signika:wght@600&display=swap" rel="stylesheet">    <style>
+        .container{
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+        .bg{
+            border: 13px solid white;
+    border-radius: 32px;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('./www.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+        }
+        .bwp{
+            background-image: url('./www.jpg');  
+        }
+        .downed{
+            width: 100%;
+            height: 50vh;
+            /* background-color: rgba(255, 255, 255, 0.551); */
+
+        }
+        .d2{
+            width: 100%;
+            height: 50vh;
+            /* background-color: rgb(255, 0, 0); */
+            position: absolute;
+        }
+        
+
+
+
+        @keyframes ism {
+
+   0%{margin-top: 350px;}
+   /* 25%{}
+   50%{}
+   75%{} */
+   100%{margin-top: 0px;}
+
+}
+.big{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+.bigc{
+    /* background-color: rgba(0, 128, 0, 0.674); */
+}
+.logo{
+    margin: 60px 0 0 30px;
+    display: flex;
+   /* align-items: center; */
+    /* justify-content: center; */
+}
+.nlogo{
+    width: 35px;
+    height: 35px;
+    margin-top: 4px;
+}
+.nitj{
+    color: white;
+    font-weight: 900;
+    font-size: 170%;
+    font-family: 'Noto Sans';
+    /* font-family: 'Roboto'; */
+}
+.p1{
+    color: white;
+    font-family: 'Kanit';
+    font-size: 180%;
+    margin-bottom: 0;
+    margin-left: 40px;
+}
+.p2{
+    color: white;
+    font-family: 'Kanit';
+    font-weight: 600;
+    font-size: 300%;
+    margin-left: 40px;
+    letter-spacing: 2px;
+    margin-top: -13px;
+}
+.ant{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+.fgy{
+    /* display: none; */
+   position: absolute;
+   bottom: 80px;
+   margin-left: 13vw;
+   margin-right: 13vw;
+}
+.sup{
+   
+    width: 70vw;
+  height: 43px;
+  
+    font-family: 'Poppins';
+    background-color: #3d93ff;
+    outline: none;
+    border: none;
+    border-radius: 12px;
+    box-shadow:2px 2px 10px rgb(0 0 0 / 52%);
+}
+.already{
+    color: white;
+    margin: 20px;
+    /* font-family: ''; */
+    
+}
+.loggd{
+    text-decoration: none;
+    font-weight: 700;
+}
+.d3{
+            display: none;
+            /* width: 80%; */
+            justify-content: center;
+            background-color: rgb(255, 255, 255);
+            position: absolute;
+            
+            
+          margin-top: 350px;
+        
+        
+          border-radius: 30px;
+            
+        }
+        .forgot{
+          color: gray;
+          font-family: Roboto;
+        }
+       .anime{
+        display: flex;
+        justify-content: center;
+        margin-top: 0px; 
+        animation: ism 1s 1 ease-out ;
+       }
+       .Welcome{
+        font-family: 'Kavoon';
+        color: hwb(0 24% 76%);
+       }
+       .inps{
+        width: 70vw;
+       }
+       .inpsform{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       }
+       .btn-block{
+        width: 170px;
+        border-radius: 20px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.115);
+       }
+       .glass{
+        width: 92%;
+    padding: 25px;
+    height: 66.7%;
+       }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <div class="bg" id="bggg">
+          <div class="big">
+              <div class="one bigc">
+                <div class="logo">
+                    <img class="nlogo" src="nitjlogo.png" alt="">
+                    <p class="nitj">NITJ</p>
+                </div>
+                <div class="namme">
+                    <p></p>
+
+                    <p class="p1"> Mega Boys </p>
+                    <p class="p2"> Hostels </p>
+                </div>
+              </div>
+              <div class="two bigc d-flex justify-content-center">
+                <div class="d3 glass" id="gilla">
+                  <div class="d-flex justify-content-center align-items-center">
+                   
+                    <form class="inpsform">
+                      <h3 class="mb-4 Welcome" >Welcome Back!</h3>
+                      <!-- Email input -->
+                      <div class="form-outline mb-4 d-flex justify-content-center">
+                        <!-- <label class="form-label" for="form1Example1">Email address</label> -->
+                        <input type="email" id="form1Example1" class="form-control inps" placeholder="Email" />
+                        
+                      </div>
+                    
+                      <!-- Password input -->
+                      <div class="form-outline mb-4 d-flex justify-content-center">
+
+                        <input type="password" id="form1Example2" class="form-control inps" placeholder="Password" />
+                      
+                      </div>
+                    
+                      <!-- 2 column grid layout for inline styling -->
+                      <div class="row mb-5">
+                        <div class="col d-flex justify-content-center">
+                          <p class="forgot mb-0">Forgot Password</p>
+                          
+                        </div>
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-primary btn-block my-3" id="siginbtn">Sign in</button>
+                      </div>
+                    <div class="d-flex justify-content-center">
+                      <p class="already " style="color: black;">Don't have account? <a class="loggd" href="">Sign up</a></p>
+                    </div>
+                    </div>
+                    
+                      <!-- Submit button -->
+                     
+                    </form>
+                  </div>
+                  
+
+              </div>
+                <div class="fgy" id="clbutton">   
+                  
+                    <div class="ant"> 
+         <button class="btn btn-primary sup" id="alertt">Sign up</button>
+         <p class="already">Already have account? <a class="loggd" href="">log in</a></p>
+        </div>
+                </div>
+              </div>
+          </div>
+                
+        </div>
+
+    </div>
+
+
+  
+     
+    <script>
+        document.getElementById('alertt').addEventListener('click',()=>{
+            document.getElementById('gilla').classList.add('anime')
+        })
+        document.getElementById('d3doen').addEventListener('click',()=>{
+            document.getElementById('gilla').classList.remove('anime')
+        })
+       
+
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </body>
+</html>
